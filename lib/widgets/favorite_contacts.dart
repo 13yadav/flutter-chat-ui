@@ -43,7 +43,7 @@ class FavoriteContacts extends StatelessWidget {
                   child: Column(
                     children: [
                       CircleAvatar(
-                        radius: 35.0,
+                        radius: 32.0,
                         backgroundImage: AssetImage(favorites[index].imageUrl),
                       ),
                       SizedBox(
