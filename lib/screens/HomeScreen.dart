@@ -1,3 +1,5 @@
+import 'package:Privatte/widgets/category_selector.dart';
+import 'package:Privatte/widgets/favorite_contacts.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -9,10 +11,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).primaryColor,
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.menu),
-          iconSize: 30.0,
+          iconSize: 24.0,
           color: Colors.white,
           onPressed: () {},
         ),
@@ -20,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text(
           "Privatte",
           style: TextStyle(
-            fontSize: 28,
+            fontSize: 24,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -28,10 +31,29 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           IconButton(
             icon: Icon(Icons.search),
-            iconSize: 30.0,
+            iconSize: 24.0,
             color: Colors.white,
             onPressed: () {},
           ),
+        ],
+      ),
+      body: Column(
+        children: [
+          CategorySelector(),
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                  color: Theme.of(context).accentColor,
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30.0),
+                      topRight: Radius.circular(30.0))),
+              child: Column(
+                children: [
+                  FavoriteContacts()
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );

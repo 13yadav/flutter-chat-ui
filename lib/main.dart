@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Privatte',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: "Inter",
         primarySwatch: Colors.red,
         accentColor: Color(0xFFFEF9EB),
       ),
