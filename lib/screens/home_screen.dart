@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text(
           "Privatte",
           style: TextStyle(
-            fontSize: 24,
+            fontSize: 28,
             fontWeight: FontWeight.bold,
           ),
         ),
